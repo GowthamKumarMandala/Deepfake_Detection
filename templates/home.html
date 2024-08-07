@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>Home</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="static/images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="static/style.css">
+    <!-- Colors CSS -->
+    <link rel="stylesheet" href="static/css/colors.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="static/css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="static/css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="static/js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.static/js/1.4.2/respond.min.js"></script>
+
+	  
+    <![endif]-->
+<style>
+    *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            transform-style:s;
+    }
+    html {
+            scroll-behavior: smooth;
+    }
+
+	.section {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            padding: 0px 0;
+	}
+	#home {
+            background-image: url('static/uploads/slider-01.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* You can also set background-position to center if needed */
+            /* Example:
+            background-position: center;
+            */
+	}
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin:10px;
+    }
+    .title> h3{
+        font-weight: bold;
+    }
+    .wrapper{
+            border: 1px solid rgb(219, 205, 205);
+            box-sizing: border-box;
+            width: 1514px;
+            height: 500px;
+            display: flex;
+			background-color: white;
+            justify-content: center;
+            align-items: center;
+        }
+        .container1{
+            height: 400px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: start;
+        }
+        .card{
+            width: 80px;
+            border-radius: .75rem;
+            background-size: cover;
+            cursor: pointer;
+			background-color: white;
+            overflow: hidden;
+            margin: 0 10px;
+            display: flex;
+            align-items: flex-end;
+            transition: .6s cubic-bezier(.28,-0.03,0,0.99);
+            box-shadow: 0px 10px 30px -5px grey;
+        }
+        .card > .row{
+            color: white;
+            display: flex;
+            flex-wrap: nowrap;
+            
+        }
+        .card > .row > .icon{
+            background: #223;
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px;
+        }
+        .card > .row > .description{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            height: 80px;
+            width: 520px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition-delay: .3s;
+            transition: all .3s ease;
+        }
+        .description p{
+            color: white;
+            padding-top: 5px;
+			background-color: black;
+        }
+        .description h4{
+			color: #fff;
+			background-color: black;
+            text-transform: uppercase;
+        }
+        input{
+            display: none;
+        }
+        input:checked + label {
+            width: 600px;
+        }
+        input:checked + label .description{
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        .card[for="c1"]{
+            background-image:url('./static/images/TOGGLE/rashmika-DF.jpg');
+        }
+        .card[for="c2"]{
+            background-image:url('./static/images/TOGGLE/johansson.jpg');
+        }
+        .card[for="c3"]{
+            background-image:url('./static/images/TOGGLE/obama.jpg');
+        }
+        .card[for="c4"]{
+            background-image:url('./static/images/TOGGLE/sachin.jpeg');
+        }
+        .card[for="c5"]{
+            background-image:url('./static/images/TOGGLE/trump.jpg');
+        }
+		
+        
+	/* TOGGLE BUTTON CSS */
+	.container0{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 150px;
+		flex-direction: column;
+	}
+	.button{
+		height: 400px;
+		width: 900px;
+		
+	}
+	.toggle-btn{
+		height: 300px;
+		width: 760px;
+		border:none;
+        background:url("./static/images/TOGGLE/RASMIKA-FAKE.jpg");
+		border-radius: 150px;
+		box-shadow: 1px 10px 12px 2px rgb(125, 100, 82) inset;
+		transition: all .9s ease;
+		transform: rotate(0deg)
+	}
+	.active-toggle{
+        background: url("./static/images/TOGGLE/RASMIKA1.jpg");
+		box-shadow: 1px 10px 12px 2px rgb(125, 100, 82) inset;
+        
+	}
+	.active-toggle .span{
+		background:#fff;
+		margin-left: 490px;
+		transform: rotate(90deg)
+	}
+	.button button span{
+		height: 260px;
+		width:260px;
+		margin-left: 10px;
+		background: rgb(251, 247, 200);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		border-radius: 50%;
+		z-index: 20;
+		box-shadow: 5px -3px 9px -1px rgb(128 128 128) inset,1px 16px 22px 4px rgb(125, 100, 82) ;
+		transition: all 1s ease;
+		
+	}
+	.text h1{
+		font-size: 50px;
+		margin-top: -50px;
+		margin-left:50px;
+		font-family: Arial, Helvetica, sans-serif;
+		text-shadow: 5px -3px 9px -1px grey;
+	}
+
+</style>
+</head>
+<body class="host_version"> 
+
+	
+
+     <!-- LOADER -->
+	<div id="preloader">
+		<div class="loading">
+			<div class="finger finger-1">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="finger finger-2">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="finger finger-3">
+				<div class="finger-item">
+				  <span></span><i></i>
+				</div>
+			</div>
+  			<div class="finger finger-4">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="last-finger">
+				<div class="last-finger-item"><i></i></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER  -->
+
+
+    <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- <a class="navbar-brand" href="index.html"><img src="static/images/logos/logo-hosting.png" alt="image"></a> -->
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a class="active" href="/logon">SignUp</a></li>
+                        <li><a href="/login">Signin </a></li>   
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+	
+	
+
+    <div class="title">
+        <h3>Tilte: Exploring Xception's Effectiveness in Detecting Deep Fake 
+            Image and Video Formats</h3>
+    </div>
+	<div class="wrapper">
+        
+        <div class="container1">
+            <input type="radio" name="slide" id="c1" checked>
+            <label for="c1" class="card" style="background-image: url('{{ url_for('static', filename='images/TOGGLE/rashmika-DF.jpg') }}');">
+                <div class="row">
+                    <div class="icon">1</div>
+                    <div class="description">
+                        <h4>actress</h4>
+                        <p>A deepfake video which effects the indian actress Rasmika mandanna</p>
+                    </div>
+                </div>
+            </label>
+            
+            <input type="radio" name="slide" id="c2" >
+            <label for="c2" class="card">
+                <div class="row">
+                    <div class="icon">2</div>
+                    <div class="description">
+                        <h4>actress</h4>
+                        <p>A deepfake image which effects the American actress Scarlett Johansson</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c3" >
+            <label for="c3" class="card">
+                <div class="row">
+                    <div class="icon">3</div>
+                    <div class="description">
+                        <h4>politician</h4>
+                        <p>Barack Obama also effected by A Deepfake content with his face</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c4" >
+            <label for="c4" class="card">
+                <div class="row">
+                    <div class="icon">4</div>
+                    <div class="description">
+                        <h4>cricketer</h4>
+                        <p>Indian cricketer sachin is effected by the deepfake advertisement</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c5">
+            <label for="c5" class="card">
+                <div class="row">
+                    <div class="icon">5</div>
+                    <div class="description">
+                        <h4>politician</h4>
+                        <p>Donald Trump also effected by A Deepfake content with his face</p>
+                    </div>
+                </div>
+            </label>
+
+        </div>
+    </div>
+
+	<!-- TOGGLE IMAGES -->
+	<div class="container0">
+		<div class="text">
+            <h1 class="text" id="text">Original</h1>
+        </div>
+        <div class="button">
+            <Button class="toggle-btn" onclick="toggle()" id="toggle-btn"><span class="span">Actress>></span></Button>
+        </div>
+    </div>
+    <script>
+        var btn = document.getElementById("toggle-btn");
+        var txt = document.getElementById("text");
+        function toggle(){
+            btn.classList.toggle("active-toggle");
+            if(txt.innerText=="Original"){
+                txt.innerText = "DeepFake";
+            }else{
+                txt.innerHTML = "Original";
+            }
+            
+        }
+
+	</script>
+	<!-- TOGGLE IMAGES END -->
+
+    <div id="overviews" class="section wb">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 col-md-offset-2">
+                    <h3>About</h3>
+                    <p class="lead">DeepFake detection using Convolutional Neural Networks (CNNs) is a critical approach in addressing the challenges posed by the proliferation of manipulated multimedia content. These systems rely on the inherent ability of CNNs to automatically extract and learn intricate features from visual data. The training process involves exposing the model to a diverse dataset that encompasses both authentic and DeepFake content, enabling the network to discern patterns indicative of manipulation. CNNs are adept at capturing spatial hierarchies and abstract representations, making them well-suited for identifying anomalies in visual information. The effectiveness of these models is often bolstered by techniques like transfer learning, leveraging knowledge gained from pre-trained models on extensive datasets. In practical terms, a trained CNN can analyze new content and provide a probability score, aiding in the detection and mitigation of DeepFake media. Continuous research and advancements in CNN architectures further refine the accuracy and robustness of DeepFake detection systems, contributing to the ongoing battle against synthetic media manipulation.</p>
+                </div>
+    		</div>
+		</div>
+	</div>
+	
+        
+           
+            
+	 
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+            
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- ALL JS FILES -->
+    <script src="static/js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="static/js/custom.js"></script>
+
+</body>
+</html>
